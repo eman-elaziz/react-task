@@ -1,0 +1,72 @@
+.login {
+    min-height: 100vh;   
+}
+.container{
+    display:flex;
+
+}
+/* .slider{
+    display: none;
+    
+} */
+.loginForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.loginContent{
+    width: 80%;
+  
+  
+    
+
+
+}
+.logoContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.logo{
+    margin-top: 2rem;
+    width: 50px;
+    height: 50px;
+    
+}
+.h3{
+  padding-top:20px; 
+}
+.h2{
+    padding: 1.5rem 0;
+
+}
+.label{
+    padding: 1rem 1rem 0 1rem ;
+    display: inline-block;
+}
+.formControl{
+    display: block;
+    padding: 1rem;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #f6f8fc;
+    margin-top: 1rem;
+    border: none;
+}
+
+@media (min-width:1024px){
+    .slider{
+        width: 70%;
+        background-color: aqua;
+        height: 100vh;
+        
+    }
+    .loginForm{
+
+        width: 30%;
+        height: 100vh;
+     
+    }
+
+}
