@@ -1,3 +1,9 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .login {
     min-height: 100vh;   
 }
@@ -5,23 +11,51 @@
     display:flex;
 
 }
-/* .slider{
-    display: none;
+.slider{
+    position: relative;
     
-} */
+}
+.slide1 , .slide2 ,.slide3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} 
+ .slide1{
+    background-image:url('../../assests/images/slide1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade1 3000ms infinite;
+
+}
+.slide2{
+    background-image:url('../../assests/images/slide2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade2 3000ms infinite;
+
+}
+.slide3{
+    background-image:url('../../assests/images/slide3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade3 3000ms infinite;
+
+}
 .loginForm{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-content: space-between;
+ 
 
 }
 .loginContent{
     width: 80%;
-  
-  
-    
+    position: relative;
 
-
+}
+.logoMobile{
+    justify-content: center;
 }
 .logoContainer{
     display: flex;
@@ -38,10 +72,7 @@
   padding-top:25px; 
   padding-left: 10px;
 }
-.h2{
-    padding: 1.5rem 0;
 
-}
 .label{
     padding: 1rem 1rem 0 1rem ;
     display: inline-block;
@@ -81,19 +112,38 @@
 
 }
 .line{
-   margin-top: 3rem;
+   margin-top: 2.5rem;
 color: #fcf9f9;
 background-color: #fcf9f9;
 }
 .googleButton{
     background-color: #565353;
    margin-top: 2rem;
+   padding: .75rem;
 
 }
+/* .footerContainer{
+    position: absolute;
+    bottom:20px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+} */
+.logoDesktop{
+    display:none;
+}
+
 @media (min-width:1024px){
+    .logoDesktop{
+        display:flex;
+    }
+    .logoMobile{
+display:none
+    }
     .slider{
         width: 70%;
-        background-color: aqua;
+      
         height: 100vh;
         
     }
@@ -107,4 +157,50 @@ background-color: #fcf9f9;
         width:90%
     }
 
+}
+@keyframes fade1{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+   
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade2{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+   
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fade3{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+   
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
